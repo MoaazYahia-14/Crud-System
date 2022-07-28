@@ -1,0 +1,50 @@
+body
+{
+   font-family: 'Roboto Mono', monospace;
+   background-color: #00640028;
+}
+/* form */
+label  {
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   transform: translateY(-50%);
+   pointer-events: none;
+   transition: all .2s linear;
+}
+label[for="productSearch"] {
+   left: 26%;
+}
+:is(input , textarea):focus + label ,
+:is(input , textarea):not(:placeholder-shown) + label {
+   top: 0;
+   transform: translateY(0) ;
+   font-size: .65rem;
+}
+/* table */
+.table-responsive {
+   overflow-y: auto;
+   height: 350px;
+}
+
+:is(lord-icon, .icon-table) {
+   cursor: pointer;
+}
+
+
+/* Tasbetat */
+#del
+{
+   cursor: pointer;
+}
+.greenColor
+{
+   color: #006400;
+}
+.contentSection,
+.tableSection
+{
+   border: 2px solid #00640054;
+   padding: 10px;
+   margin-top:20px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- ----------------- Start Meta Data ----------------- -->
+      <meta name="author" content="Moa'az Yahia" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="description" content="Crud System" />
+      <meta name="keywords" content="crud system , html , Css ,Bootstrap , javascript" />
+      <!-- ----------------- End Meta Data ----------------- -->
+
+      <!-- ----------------- Srart Links Font and Icon ----------------- -->
+      <link rel="icon" href="./image/Crud.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+      <!-- ----------------- End Links Font ----------------- -->
+      
+      <!-- ----------------- Start Link Relashin ----------------- -->
+      <!-- Font Awesome css file and Bootstrap css file and mainCss -->
+      <link rel="stylesheet" href="./css/all.min.css" />
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <title>Crud System</title>
+      <!-- ----------------- End Link Relashin ----------------- -->
+   </head>
+   <body>
+      <main class="container py-5 text-secondary ">
+         <section class="contentSection shadow rounded text-center bg-light">
+            <div class="crud-data w-50 m-auto py-5">
+               <h1 class="display-5 mb-5 greenColor fw-light">CRUD SYSTEM</h1>
+               <div class="systemContant">
+                  <p class=" mb-2 mt-3 text-start greenColor fw-bold">Product Name:</p>
+                  <div class="data position-relative">
+                     <input type="text" id="productInputName" class="form-control " placeholder=" " />
+                     <label for="productInputName">Product Name</label>
+                  </div>
+                  <p class=" mb-2 mt-3 text-start greenColor fw-bold"> Product Price:</p>
+                  <div class="data position-relative">
+                     <input
+                        type="text"
+                        id="productInputPrice"
+                        class="form-control "
+                        placeholder=" "
+                     />
+                     <label for="productInputPrice"> Product Price</label>
+                  </div>
+                  <p class=" mb-2 mt-3 text-start greenColor fw-bold">Product Category:</p>
+                  <div class="data position-relative">
+                     <input
+                        type="text"
+                        id="productInputCategory"
+                        class="form-control "
+                        placeholder=" "
+                     />
+                     <label for="productInputCategory"> Product Category</label>
+                  </div>
+                  <p class=" mb-2 mt-3  text-start greenColor fw-bold"> ProductDes:</p>
+                  <div class="data position-relative">
+                     <textarea id="productInputDes" class="form-control " placeholder=" "></textarea>
+                     <label for="productInputDes">Product Description</label>
+                     <div class="invalid-feedback all-valid">Please Enter all Data.</div>
+                  </div>
+               </div>
+
+               <div class="btn-group gap-3 mt-4">
+                  <button id="addProduct" type="button" class="btn btn-outline-success btn-sm rounded-2"> Add Product </button>
+                  <button id="updateProduct" type="button" class="btn btn-outline-warning btn-sm rounded-0 d-none">Update Product</button>
+                  <!-- <button id="clearForm" type="button" class="btn btn-outline-secondary btn-sm rounded-0">Clear</button> -->
+               </div>
+            </div>
+         </section>
+         
+         <section class="tableSection rounded-3 pt-5 bg-light">
+            <div class="data position-relative">
+               <input type="search" id="productSearch" class="form-control form-control-sm  mt-5 mx-auto w-50 rounded-4 p-1" placeholder=" " />
+               <label for="productSearch"><i class="fa-solid fa-magnifying-glass"></i> Enter product name to search ...</label>
+            </div>
+            <div class="table-responsive">
+               <table class="table text-center font-monospace text-nowrap caption-top table-hover">
+                  <caption> Total : <span id="totaProduct" class="badge bg-secondary">0</span> </caption>
+               <div class="d-flex justify-content-start align-items-center my-2">
+                  <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="click" colors="primary:#2E8B57,secondary:#2E8B57" stroke="80" style="width: 40px; height: 40px" id="deleteAllData"></lord-icon> 
+                  <span id="del">Delate all</span>
+               </div>
+                  <thead >
+                     <tr class="position-sticky top-0 table-light">
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delate</th>
+                     </tr>
+                  </thead>
+                  <tbody id="tableData"></tbody>
+               </table>
+            </div>
+         </section>
+      </main>
+      <!-- animation icon -->
+      <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+      <!-- Sweet alert -->
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <!-- Bootstrap Js File -->
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <!-- Custome Js file -->
+      <script src="./js/main.js"></script>
+   </body>
+</html>
